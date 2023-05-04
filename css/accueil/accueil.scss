@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+/////////// VARIABLE ////////////
+
+$color-primaire: #9356DC;
+$color-secondaire: #FF79DA;
+$color-tertiaire: #99E2D0;
+
+
+/////////// MIXINS ////////////
+
+@mixin bloc-shadow{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/////////// GLOBAL ////////////
+
+*{
+    margin: 0;
+}
+
+html{
+    width: 100%;
+}
+
+body{
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 2;
+    background-color: #F6F6F6;
+    // padding: 0 20px;
+}
+
+img{
+    max-width: 100%;
+}
+
+h2{
+    width: 100%;
+    font-size: 24px;
+}
+
+/////////// HEADER ////////////
+
+header {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+    &__logo{
+        width: 34%;
+        max-width: 200px;
+    }
+}
+
+.localisation{ 
+    width: 100%;
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #353535;
+    padding: 10px 0;
+
+    &__icon{
+        margin-right: 15px;
+    }
+}
