@@ -54,4 +54,35 @@ header {
 }
 .localisation__icon {
   margin-right: 15px;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 25px;
+}
+.intro__titre {
+  width: 50%;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+}
+.intro__txt {
+  width: 70%;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 21px;
+}
+.intro__btn {
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 25px;
+  padding: 20px;
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }/*# sourceMappingURL=accueil.css.map */
