@@ -14,6 +14,11 @@ body {
   background-color: #F6F6F6;
 }
 
+main {
+  max-width: 1100px;
+  margin: auto auto;
+}
+
 img {
   max-width: 100%;
 }
@@ -84,5 +89,42 @@ header {
   border: 0;
   border-radius: 25px;
   padding: 20px;
-  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.fmt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 20px;
+  background-color: #FFFFFF;
+}
+.fmt__etape {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.etape-card {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 20px;
+}
+.etape-card__nb {
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
 }/*# sourceMappingURL=accueil.css.map */
