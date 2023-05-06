@@ -14,6 +14,11 @@ body {
   background-color: #F6F6F6;
 }
 
+main {
+  max-width: 1100px;
+  margin: auto auto;
+}
+
 img {
   max-width: 100%;
 }
@@ -84,5 +89,120 @@ header {
   border: 0;
   border-radius: 25px;
   padding: 20px;
-  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.fmt {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 70px 20px;
+  background-color: #FFFFFF;
+}
+.fmt__etape {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.etape-card {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 20px;
+}
+.etape-card__nb {
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.resto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 70px 20px;
+}
+.resto__card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.card__haut {
+  position: relative;
+  height: 231px;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card__baniere {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  text-align: center;
+  font-weight: 500;
+  color: #278870;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.card__txt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px 15px 15px 10px;
+  border-radius: 0 0 15px 15px;
+}
+.card__nom {
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #353535;
+  padding: 20px;
+}
+footer img {
+  padding: 15px 0;
+}
+footer .lien {
+  display: flex;
+  flex-direction: column;
+}
+footer .lien__picto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer .lien__base {
+  color: #FFFFFF;
+  text-decoration: none;
 }/*# sourceMappingURL=accueil.css.map */
