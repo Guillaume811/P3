@@ -14,11 +14,6 @@ body {
   background-color: #F6F6F6;
 }
 
-main {
-  max-width: 1100px;
-  margin: auto auto;
-}
-
 img {
   max-width: 100%;
 }
@@ -62,7 +57,8 @@ header {
 }
 
 .intro {
-  width: 100%;
+  max-width: 1100px;
+  margin: auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,12 +66,22 @@ header {
   padding: 20px 0;
   gap: 25px;
 }
+@media screen and (min-width: 1100px) {
+  .intro {
+    gap: 40px;
+  }
+}
 .intro__titre {
   width: 50%;
   font-size: clamp(24px, 3vw, 40px);
   font-weight: 700;
   text-align: center;
   line-height: 28px;
+}
+@media screen and (min-width: 1100px) {
+  .intro__titre {
+    width: 100%;
+  }
 }
 .intro__txt {
   width: 70%;
@@ -94,11 +100,15 @@ header {
 }
 
 .fmt {
+  background-color: #FFFFFF;
+}
+.fmt__container {
+  max-width: 1100px;
+  margin: auto auto;
   display: flex;
   flex-direction: column;
   gap: 25px;
   padding: 70px 20px;
-  background-color: #FFFFFF;
 }
 .fmt__etape {
   width: 100%;
@@ -129,6 +139,8 @@ header {
 }
 
 .resto {
+  max-width: 1100px;
+  margin: auto auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -184,15 +196,31 @@ header {
 }
 
 footer {
+  min-height: 114px;
   background-color: #353535;
   padding: 20px;
 }
+@media screen and (min-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    gap: 70px;
+  }
+}
 footer img {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 footer .lien {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1100px) {
+  footer .lien {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 footer .lien__picto {
   display: flex;

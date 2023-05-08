@@ -19,6 +19,11 @@ $color-fond2: #353535;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+@mixin bloc-max-with{
+    max-width: 1100px;
+    margin: auto auto;
+}
+
 /////////// GLOBAL ////////////
 
 *{
@@ -34,11 +39,6 @@ body{
     font-size: 16px;
     line-height: 2;
     background-color: #F6F6F6;
-}
-
-main{
-    max-width: 1100px;
-    margin: auto auto;
 }
 
 img{
@@ -91,7 +91,7 @@ header {
 /////////// MAIN ////////////
 
 .intro{
-    width: 100%;
+    @include bloc-max-with;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,12 +99,21 @@ header {
     padding: 20px 0;
     gap: 25px;
 
+    @media screen and (min-width: 1100px) {
+        gap: 40px; 
+    }
+
     &__titre{
         width: 50%;
         font-size: clamp(24px, 3vw, 40px);
         font-weight: 700;
         text-align: center;
         line-height: 28px;
+
+        @media screen and (min-width: 1100px) {
+            width: 100%;
+            
+        }
     }
 
     &__txt{
@@ -128,11 +137,15 @@ header {
 /////////// FONCTIONNEMENT ////////////
 
 .fmt{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 70px 20px;
     background-color: $color-fond;
+
+    &__container{
+        @include bloc-max-with;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 70px 20px;
+    }
 
     &__etape{
         width: 100%;
@@ -168,6 +181,7 @@ header {
 /////////// RESTAURANT ////////////
 
 .resto{
+    @include bloc-max-with;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -230,16 +244,30 @@ header {
 /////////// FOOTER ////////////
 
 footer{
+    min-height: 114px;
     background-color: $color-fond2;
     padding: 20px;
 
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:end;
+        gap: 70px;
+    }
+
     img{
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .lien{
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: 1100px) {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
 
         &__picto{
             display: flex;
