@@ -7,6 +7,7 @@ $color-secondaire: #FF79DA;
 $color-tertiaire: #99E2D0;
 $color-fond: #FFFFFF;
 $color-fond2: #353535;
+$color-fond3: #F6F6F6;
 
 
 /////////// MIXINS ////////////
@@ -19,9 +20,19 @@ $color-fond2: #353535;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-@mixin bloc-max-with{
+@mixin bloc-shadow3{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@mixin bloc-max-with-1100{
     max-width: 1100px;
-    margin: auto auto;
+    margin: auto;
+}
+
+@mixin bloc-max-with-634{
+    width: 100%;
+    max-width: 634px;
+    margin: auto;
 }
 
 /////////// GLOBAL ////////////
@@ -38,7 +49,7 @@ body{
     font-family: Roboto;
     font-size: 16px;
     line-height: 2;
-    background-color: #F6F6F6;
+    background-color: $color-fond;
 }
 
 img{
@@ -115,4 +126,109 @@ footer{
             text-decoration: none;
         }
     }
+}
+
+/////////// MAIN ////////////
+
+.entete{
+    
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        max-height: 383px;
+        object-fit: cover;
+    }
+
+}
+
+// .body-carte{
+
+// }
+
+.carte{
+    @include bloc-max-with-1100;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: $color-fond3;
+    border-radius: 30px;
+    padding: 30px 20px;
+
+    &__head{
+        @include bloc-max-with-634;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 1100px) {
+            justify-content: center;
+            gap: 25px;
+        }
+    }
+
+    &__titre{
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+.plat{
+    @include bloc-max-with-634;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__titre{
+        position: relative;
+        font-weight: 300;
+        text-transform: uppercase;
+        
+    }
+
+    &__titre:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: $color-tertiaire;
+    }
+
+    &__txt{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        background-color: $color-fond;
+        border-radius: 15px;
+        line-height: 1.5;
+        padding: 15px;
+        @include bloc-shadow3;
+    }
+
+    &__prix{
+        color: $color-fond2;
+        font-weight: bold;
+    }
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+
+    &__commander{
+        width: 50%;
+        font-size: 18px;
+        color: $color-fond;
+        border: 0;
+        border-radius: 30px;
+        padding: 20px;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        @include bloc-shadow;
+    }
+    
 }
