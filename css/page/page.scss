@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+/////////// VARIABLE ////////////
+
+$color-primaire: #9356DC;
+$color-secondaire: #FF79DA;
+$color-tertiaire: #99E2D0;
+$color-fond: #FFFFFF;
+$color-fond2: #353535;
+
+
+/////////// MIXINS ////////////
+
+@mixin bloc-shadow{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@mixin bloc-shadow2{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin bloc-max-with{
+    max-width: 1100px;
+    margin: auto auto;
+}
+
+/////////// GLOBAL ////////////
+
+*{
+    margin: 0;
+}
+
+html{
+    width: 100%;
+}
+
+body{
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 2;
+    background-color: #F6F6F6;
+}
+
+img{
+    max-width: 100%;
+}
+
+h2{
+    width: 100%;
+    font-size: 24px;
+}
+
+
+/////////// HEADER ////////////
+
+header {
+    width: 100%;
+    background-color: $color-fond;
+}
+
+.band{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+    &__logo{
+        width: 34%;
+        max-width: 200px;
+    }
+}
+
+/////////// FOOTER ////////////
+
+footer{
+    min-height: 114px;
+    background-color: $color-fond2;
+    padding: 20px;
+
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:end;
+        gap: 70px;
+    }
+
+    img{
+        padding: 10px 0;
+    }
+
+    .lien{
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1100px) {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        &__picto{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        &__base{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 2;
+  background-color: #F6F6F6;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  width: 100%;
+  font-size: 24px;
+}
+
+header {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.band {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.band__logo {
+  width: 34%;
+  max-width: 200px;
+}
+
+footer {
+  min-height: 114px;
+  background-color: #353535;
+  padding: 20px;
+}
+@media screen and (min-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    gap: 70px;
+  }
+}
+footer img {
+  padding: 10px 0;
+}
+footer .lien {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1100px) {
+  footer .lien {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+footer .lien__picto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer .lien__base {
+  color: #FFFFFF;
+  text-decoration: none;
+}/*# sourceMappingURL=page.css.map */

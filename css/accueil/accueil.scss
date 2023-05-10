@@ -7,6 +7,7 @@ $color-secondaire: #FF79DA;
 $color-tertiaire: #99E2D0;
 $color-fond: #FFFFFF;
 $color-fond2: #353535;
+$color-text: #000000;
 
 
 /////////// MIXINS ////////////
@@ -192,9 +193,14 @@ header {
         flex-direction: column;
         gap: 25px;
     }
+
+    &__lien{
+        width: 100%;
+    }
 }
 
 .card{
+    width: 100%;
     position: relative;
     display: inline-block;
     @include bloc-shadow;
@@ -231,6 +237,7 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        color: $color-text;
         background-color: $color-fond;
         padding: 10px 15px 15px 10px;
         border-radius: 0 0 15px 15px;
