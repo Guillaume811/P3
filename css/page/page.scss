@@ -188,7 +188,7 @@ footer{
         
     }
 
-    &__titre:after{
+    &__titre::after{
         content: "";
         position: absolute;
         bottom: 0;
@@ -198,16 +198,38 @@ footer{
         background-color: $color-tertiaire;
     }
 
+    &__anim{
+        display: flex;
+        background-color: $color-fond;
+        border-radius: 15px;
+        @include bloc-shadow3;
+
+        &::after{
+            content: '';
+            width: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-tertiaire;
+            border-radius: 0px 15px 15px 0px;
+            transition: width 0.3s linear;
+        }
+
+        &:hover::after{
+            content: url(../../images/icon/circle-check-solid.svg);
+            width: 15%;
+        }
+
+    }
+
     &__txt{
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
-        background-color: $color-fond;
-        border-radius: 15px;
         line-height: 1.5;
         padding: 15px;
-        @include bloc-shadow3;
     }
 
     &__prix{
