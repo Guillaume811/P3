@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @keyframes heart-anim {
   0% {
-    transform: scaleY(0);
+    opacity: 0;
   }
   100% {
-    transform: scaleY(1);
+    opacity: 1;
   }
 }
 * {
@@ -140,13 +140,24 @@ footer .lien__base {
 }
 .anim__heart-off {
   z-index: 1;
+  font-size: 1.5em;
 }
 .anim__heart-on {
   z-index: 2;
+  font-size: 1.5em;
   position: absolute;
-  bottom: 16px;
+  bottom: 8px;
   right: 0;
-  background-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.anim__heart-on:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  animation: heart-anim 400ms ease-in-out;
+  animation-direction: alternate;
 }
 
 .plat {

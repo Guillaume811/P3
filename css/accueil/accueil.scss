@@ -156,28 +156,48 @@ header {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 30px;
+
+        @media screen and (min-width: 1100px){
+            flex-direction: row;
+        }
     }
 
 }
 
 .etape-card{
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
-    background-color: #F6F6F6;
-    @include bloc-shadow;
-    padding: 20px;
-    border-radius: 20px;
+    width: 100%;
+    position: relative;
+
+    @media screen and (min-width: 1100px){
+        width: 31%;
+    }
 
     &__nb{
         width: 24px;
         height: 24px;
+        position: absolute;
+        top: 24px;
         background-color: $color-primaire;
         color: $color-fond; 
         border-radius: 50px;
         text-align: center;
+        line-height: 1.7;
+    }
+
+    &__decription{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+        background-color: #F6F6F6;
+        @include bloc-shadow;
+        padding: 20px 30px;
+        border-radius: 20px;
+        margin-left: 13px;
+    }
+
+    &__txt{
+        font-weight: bold;
     }
 
     &__icon{

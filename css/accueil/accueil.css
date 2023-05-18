@@ -118,25 +118,45 @@ header {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (min-width: 1100px) {
+  .fmt__etape {
+    flex-direction: row;
+  }
+}
 
 .etape-card {
-  width: 95%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1100px) {
+  .etape-card {
+    width: 31%;
+  }
+}
+.etape-card__nb {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 1.7;
+}
+.etape-card__decription {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 25px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: 20px;
+  margin-left: 13px;
 }
-.etape-card__nb {
-  width: 24px;
-  height: 24px;
-  background-color: #9356DC;
-  color: #FFFFFF;
-  border-radius: 50px;
-  text-align: center;
+.etape-card__txt {
+  font-weight: bold;
 }
 .etape-card__icon {
   color: #7E7E7E;
