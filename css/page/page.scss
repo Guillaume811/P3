@@ -39,6 +39,18 @@ $color-fond3: #F6F6F6;
     margin: auto;
 }
 
+/////////// Keyframe ////////////
+
+@keyframes heart-anim {
+    0%{
+        transform: scaleY(0);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
 /////////// GLOBAL ////////////
 
 *{
@@ -185,6 +197,23 @@ footer{
         font-family: Shrikhand;
         font-size: 28px;
         font-weight: 400;
+    }
+}
+
+.anim{
+    position: relative;
+
+    &__heart-off{
+        z-index: 1;
+    }
+
+    &__heart-on{
+        z-index: 2;
+        position: absolute;
+        bottom: 16px;
+        right: 0;
+        background-color: transparent;
+        // background: linear-gradient(193.33deg, $color-primaire -11.44%, $color-secondaire 123.93%);
     }
 }
 

@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@keyframes heart-anim {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 * {
   margin: 0;
 }
@@ -125,6 +133,20 @@ footer .lien__base {
   font-family: Shrikhand;
   font-size: 28px;
   font-weight: 400;
+}
+
+.anim {
+  position: relative;
+}
+.anim__heart-off {
+  z-index: 1;
+}
+.anim__heart-on {
+  z-index: 2;
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  background-color: transparent;
 }
 
 .plat {

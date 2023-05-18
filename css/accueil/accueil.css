@@ -138,6 +138,12 @@ header {
   border-radius: 50px;
   text-align: center;
 }
+.etape-card__icon {
+  color: #7E7E7E;
+}
+.etape-card__icon--violet {
+  color: #9356DC;
+}
 
 .resto {
   max-width: 1100px;

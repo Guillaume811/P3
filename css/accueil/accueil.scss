@@ -8,6 +8,7 @@ $color-tertiaire: #99E2D0;
 $color-fond: #FFFFFF;
 $color-fond2: #353535;
 $color-text: #000000;
+$color-icon: #7E7E7E;
 
 
 /////////// MIXINS ////////////
@@ -177,6 +178,14 @@ header {
         color: $color-fond; 
         border-radius: 50px;
         text-align: center;
+    }
+
+    &__icon{
+        color: $color-icon;
+
+        &--violet{
+            color: #9356DC;
+        }
     }
 }
 
