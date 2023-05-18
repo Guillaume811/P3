@@ -37,6 +37,12 @@ header {
   z-index: 1;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+.band__arrow {
+  position: absolute;
+  top: 26%;
+  left: 20px;
+  color: #353535;
+}
 .band__logo {
   width: 34%;
   max-width: 200px;
