@@ -143,24 +143,14 @@ footer .lien__base {
   height: 3px;
   background-color: #99E2D0;
 }
-.plat__anim {
+.plat__card {
   display: flex;
   background-color: #FFFFFF;
   border-radius: 15px;
+  cursor: pointer;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-.plat__anim::after {
-  content: "";
-  width: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #99E2D0;
-  border-radius: 0px 15px 15px 0px;
-  transition: width 0.3s linear;
-}
-.plat__anim:hover::after {
-  content: url(../../images/icon/circle-check-solid.svg);
+.plat__card:hover .plat__anim {
   width: 15%;
 }
 .plat__txt {
@@ -176,6 +166,15 @@ footer .lien__base {
   color: #353535;
   font-weight: bold;
 }
+.plat__anim {
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  transition: width 0.3s linear;
+}
 
 .btn {
   display: flex;
@@ -190,4 +189,10 @@ footer .lien__base {
   padding: 20px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-property: opacity, box-shadow;
+  transition-duration: 400ms;
+}
+.btn__commander:hover {
+  opacity: 0.9;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
 }/*# sourceMappingURL=page.css.map */
