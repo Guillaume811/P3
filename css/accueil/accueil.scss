@@ -130,10 +130,17 @@ header {
         font-size: 18px;
         color: $color-fond;
         border: 0;
-        border-radius: 25px;
+        border-radius: 30px;
         padding: 20px;
         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         @include bloc-shadow;
+        transition-property: opacity, box-shadow;
+        transition-duration: 400ms;
+
+        &:hover{
+            opacity: 0.9;
+            @include bloc-shadow-hover
+        }
     }
 }
 
@@ -215,17 +222,30 @@ header {
     @include bloc-max-with;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     padding: 70px 20px;
+
+    &__title{
+        margin-bottom: 2%;
+    }
 
     &__card{
         display: flex;
         flex-direction: column;
-        gap: 25px;
+
+        @media screen and (min-width: 1100px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__lien{
         width: 100%;
+        height: 251px;
+        margin-bottom: 5%;
+
+        @media screen and (min-width: 1100px){
+            max-width: 490px;
+        }
     }
 }
 
@@ -238,7 +258,7 @@ header {
 
     &__haut{
         position: relative;
-        height: 231px;
+        height: 174px;
     }
 
     &__img{
