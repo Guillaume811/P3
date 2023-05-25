@@ -309,7 +309,7 @@ footer{
 
         &:hover{
             opacity: 0.9;
-            @include bloc-shadow-hover()
+            @include bloc-shadow-hover();
         }
     }
     

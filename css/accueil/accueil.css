@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@keyframes heart-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
 }
@@ -63,7 +71,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 4vh 0;
   gap: 25px;
 }
 @media screen and (min-width: 1100px) {
@@ -89,6 +97,21 @@ header {
   text-align: center;
   font-weight: 300;
   line-height: 21px;
+}
+.intro__btn {
+  font-size: 18px;
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 30px;
+  padding: 20px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition-property: opacity, box-shadow;
+  transition-duration: 400ms;
+}
+.intro__btn:hover {
+  opacity: 0.9;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
 }
 
 .fmt {
@@ -230,6 +253,31 @@ header {
 }
 .card__nom {
   line-height: 1.5;
+}
+
+.anim {
+  position: relative;
+}
+.anim__heart-off {
+  z-index: 1;
+  font-size: 1.5em;
+}
+.anim__heart-on {
+  z-index: 2;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.anim__heart-on:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  animation: heart-anim 400ms ease-in-out;
+  animation-direction: alternate;
 }
 
 footer {
