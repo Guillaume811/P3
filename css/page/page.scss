@@ -51,6 +51,15 @@ $color-fond3: #F6F6F6;
     }
 }
 
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 /////////// GLOBAL ////////////
 
 *{
@@ -240,6 +249,16 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    >div, >h2{
+        animation: fade-in 2s linear both;
+
+        @for $i from 2 to 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: 200ms * $i;
+            }
+        }
+    }
 
     &__titre{
         position: relative;
